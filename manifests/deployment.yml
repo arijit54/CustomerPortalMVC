@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: "customerportalmvc-4dc4"
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: "customerportalmvc-4dc4"
