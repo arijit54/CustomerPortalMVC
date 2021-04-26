@@ -1,0 +1,40 @@
+﻿@model IEnumerable<CustomerPortalMVC.Models.Stocks>
+@{
+    Layout = "~/Views/Shared/AllStockMutual.cshtml";
+}
+
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.StockId)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.StockName)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.StockValue)
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.StockId)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.StockName)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.StockValue)
+                                                </td>
+
+                                            </tr>
+
+                                        }
+                                    </tbody>
+                                </table>
+                           

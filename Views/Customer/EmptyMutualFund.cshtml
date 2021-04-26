@@ -1,0 +1,40 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/LoginLayout.cshtml";
+}
+<h2 class="text-success">Mutual Fund Details</h2>
+<br />
+<center><b class="text-info">You don't have any Mutual Funds in Portfolio</b></center>
+
+
+
+<section id="portfolio" class="services">
+    <div class="container">
+
+        <div class="section-title">
+            <span>Portfolio</span>
+            <h2>Portfolio</h2>
+            <p><b>Welcome To Your Profile</b></p>
+        </div>
+
+        <div class="row" style="padding-left:25%">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="150">
+                <div class="icon-box">
+                    <div class="icon"><i class="bx bx-file"></i></div>
+                    <h4><a asp-controller="Customer" asp-action="ViewStockDetails">Your Stock Details</a></h4>
+                    <p>This will show the Mutual Funds owned by you.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box">
+                    <div class="icon"><i class="bx bx-tachometer"></i></div>
+                    <h4><a asp-controller="Customer" asp-action="ViewNetWorth">Net Worth of Your Investment</a></h4>
+                    <p>This will Calculate the Net Worth of Investments owned by you.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

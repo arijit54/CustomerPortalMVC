@@ -1,0 +1,41 @@
+﻿@model IEnumerable<CustomerPortalMVC.Models.MutualFunds>
+@{
+    Layout= "~/Views/Shared/AllStockMutual.cshtml";
+}
+
+
+
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.MutualFundId)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.MutualFundName)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.MutualFundValue)
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.MutualFundId)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.MutualFundName)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.MutualFundValue)
+                                                </td>
+
+                                            </tr>
+
+                                        }
+                                    </tbody>
+                                </table>

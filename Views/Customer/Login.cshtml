@@ -1,0 +1,283 @@
+﻿@model CustomerPortalMVC.Models.Customer
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/DuringLogin.cshtml";// DuringLogin.cshtml
+}
+<div class="container">
+    <h1 class="text-center text-danger">Login</h1>
+    <div class="row justify-content-md-center">
+
+        <div class="col-md-4">
+
+            <form asp-action="Login" asp-controller="Customer" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-success"></div>
+
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label text-info"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label text-info"></label>
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Login" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="container"><center><b class="text-warning">@ViewBag.Message</b></center></div>
+</div>
+
+
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>
+            <div class="modal-body p-0 row">
+                <div class="container-fluid">
+                    <div class="container">
+
+                        <div class="row">
+
+                            <div class="col-lg-10 col-xl-7 mx-auto">
+
+                                <h3 class="display-4" style="align-content: center;"><i class="fa fa-user" aria-hidden="true"></i> Login </h3>
+                                <p></p>
+
+                                <form asp-action="Login" asp-controller="Customer" method="post">
+                                    <div asp-validation-summary="ModelOnly" class="text-success"></div>
+
+                                    <div class="form-group">
+                                        <label asp-for="Email" class="control-label text-info"></label>
+                                        <input asp-for="Email" class="form-control" />
+                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Password" class="control-label text-info"></label>
+                                        <input asp-for="Password" class="form-control" />
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" value="Login" class="btn btn-primary" />
+                                    </div>
+
+                                    <div class="container"><center><b class="text-warning"> @ViewBag.Message</b></center></div><!---->
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div><!-- End -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="500">
+        <h1>Welcome to iFolio</h1>
+        <h2>We will show your Portfolio</h2>
+        <a href="#about" class="btn-get-started scrollto">Get Started</a>
+    </div>
+</section><!-- End Hero -->
+
+<main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
+                    <img src="assets/img/about.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
+                    <h3>About Us.</h3>
+                    <p class="fst-italic">
+                        We are doing Portfolio Management System .
+                    </p>
+
+                    <p>
+
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End About Section -->
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+        <div class="container">
+
+            <div class="section-title">
+                <span>Services</span>
+                <h2>Services</h2>
+                <p>This Services are Provides by Us</p>
+            </div>
+
+            <div class="row" style="padding-left: 25%;">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                        <h4><a asp-controller="Customer" asp-action="ViewAllStocks">Share Stock Prices</a></h4>
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="150">
+                    <div class="icon-box">
+                        <div class="icon"><i class="bx bx-file"></i></div>
+                        <h4><a asp-controller="Customer" asp-action="ViewAllMutuals">Mutual Funds Prices</a></h4>
+                        <p></p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section><!-- End Services Section -->
+    <!-- ======= Cta Section ======= -->
+    <!--<section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="text-center">
+          <h3>Call To Action</h3>
+          <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <a class="cta-btn" href="#">Call To Action</a>
+        </div>
+
+      </div>
+    </section>-->
+    <!-- End Cta Section -->
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="services">
+        <div class="container">
+
+            <div class="section-title">
+                <span>Portfolio</span>
+                <h2>Portfolio</h2>
+                <p><b>Welcome To Your Profile</b></p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+                    <div class="icon-box" onclick="myFunction()">
+                        <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                        <h4 onclick="myFunction()"><a>Your Share Stocks</a></h4>
+                        <p>This will show the Share Stocks owned by you.</p>
+                    </div>
+                </div>
+                <script>
+                    function myFunction() {
+                        alert("Login to Access this feature !");
+                    }
+                </script>
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="150">
+                    <div class="icon-box" onclick="myFunction()">
+                        <div class="icon"><i class="bx bx-file"></i></div>
+                        <h4 onclick="myFunction()"><a>Your Mutual Funds</a></h4>
+                        <p>This will show the Mutual Funds owned by you.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon-box" onclick="myFunction()">
+                        <div class="icon"><i class="bx bx-tachometer"></i></div>
+                        <h4 onclick="myFunction()"><a>Net Worth of Your Investment</a></h4>
+                        <p>This will Calculate the Net Worth of Investments owned by you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Portfolio Section -->
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container">
+
+            <div class="section-title">
+                <span>Contact</span>
+                <h2>Contact</h2>
+                <p>Donot Contact Us. You will not get any reply if you contact.</p>
+            </div>
+
+            <div class="row" data-aos="fade-up">
+                <div class="col-lg-4">
+                    <div class="info-box mb-4">
+                        <i class="bx bx-map"></i>
+                        <h3>Our Address</h3>
+                        <p>All over India, India, I love my India</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="info-box  mb-4">
+                        <i class="bx bx-envelope"></i>
+                        <h3>Email Us</h3>
+                        <p>contact@example.com</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="info-box  mb-4">
+                        <i class="bx bx-phone-call"></i>
+                        <h3>Call Us</h3>
+                        <p>+000000000000000</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row" data-aos="fade-up">
+                <!--
+
+                          <div class="col-lg-6 ">
+                            <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+                          </div>
+                        -->
+
+                <div class="col-lg-15">
+                    <form action="#" method="post" role="form" class="emailform">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group mt-3">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group mt-3">
+                            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                        </div>
+                        <div class="my-3">
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                        </div>
+                        <div class="text-center"><button type="submit">Send Message</button></div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Contact Section -->
+
+</main><!-- End #main -->
+
+
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "ViewNetWorth";
+}
+
+
+<div class="container">
+    <center>
+        <div class="col-md-4">
+            <br /><h2 class="text-success">Net Worth Value</h2><hr /><br />
+            <h3 class="text-warning">Rs.@ViewBag.Value</h3>
+        </div>
+        
+    </center>
+</div>
+
+
+<section id="portfolio" class="services">
+    <div class="container">
+
+        <div class="section-title">
+            <span>Portfolio</span>
+            <h2>Portfolio</h2>
+            <p><b>Welcome To Your Profile</b></p>
+        </div>
+
+        <div class="row" style="padding-left:25%">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="150">
+                <div class="icon-box">
+                    <div class="icon"><i class="bx bx-file"></i></div>
+                    <h4><a asp-controller="Customer" asp-action="ViewStockDetails">Your Stock Details</a></h4>
+                    <p>This will show the Mutual Funds owned by you.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box">
+                    <div class="icon"><i class="bx bx-tachometer"></i></div>
+                    <h4><a asp-controller="Customer" asp-action="ViewMutualFundDetails">Your Mutual Funds</a></h4>
+                    <p>This will Calculate the Net Worth of Investments owned by you.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
