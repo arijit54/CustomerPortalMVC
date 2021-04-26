@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "customerportalmvc-4dc4"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "customerportalmvc-4dc4"
+  template:
+    metadata:
+      labels:
+        app: "customerportalmvc-4dc4"
+    spec:
+      containers:
+        - name: "customerportalmvc-4dc4"
+          image: "customerportalmvc3.azurecr.io/customerportalmvc"
+          ports:
+          - containerPort: 80
