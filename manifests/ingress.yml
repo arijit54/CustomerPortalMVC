@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "customerportalmvc-4dc4"
+    labels:
+        app: "customerportalmvc-4dc4"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: customerportalmvcbf88-customerportalmvc-4dc4.266cca9c0b8241cca467.eastus.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "customerportalmvc-4dc4"
+                servicePort: 80
